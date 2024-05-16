@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+
+        <div class="passage">
+        <h1>facebook</h1>
+        <h2>Facebook helps you connect and share with the people in your life.</h2>
+        </div>
+
+        <div class="login">
+        <form action="post" class="form1">
+        <input type="email" name="Email" id="Email" placeholder="Email address or Phone number" required>
+        <span id="mandatory">The email address or mobile number you entered isn't connected to an account</span>
+        <input type="password" name="psw" id="psw" placeholder="Password" required>
+        <span id="mandatory1">The password you entered isn't connected to an account</span>
+
+        <input type="button" name="btn" id="btn" value="Log in">
+       </form><br>
+       <a href="forgotpassword.html" class="link">Forgotten password</a>
+       <hr>
+       <form action="">
+        <a href="new account.html" class="link1"><input type="button" id="btn1" value="Create new account"></a>
+       </form>
+        </div>
+    </div>
+    <script>
+function validateEmail() {
+    let email = document.getElementById('Email').value;
+    if (email === '') {
+        document.getElementById('mandatory').style.display = "block";
+        document.getElementById('Email').style.border = "2px solid red";
+    } else {
+        document.getElementById('mandatory').style.display = "none";
+        document.getElementById('Email').style.border = "2px solid lightgreen";
+    }
+}
+function validatePassword() {
+    let pwd = document.getElementById('psw').value;
+    if (pwd === '') {
+        document.getElementById('mandatory1').style.display = "block";
+        document.getElementById('psw').style.border = "2px solid red";
+    } else {
+        document.getElementById('mandatory1').style.display = "none";
+        document.getElementById('psw').style.border = "2px solid lightgreen";
+    }
+}
+function alertmessage(){
+  let pwd = document.getElementById('psw').value;
+let email = document.getElementById('Email').value;
+if(email!=='' && pwd!=='' ){
+      alert("Logged In successfully");
+    }
+}
+document.getElementById('btn').addEventListener('click', () => {
+    validateEmail();
+    validatePassword();
+   alertmessage();
+});        
+    </script>
+</body>
+</html>

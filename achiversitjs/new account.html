@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <style>
+        header{
+            height: 40px;
+            background-color: floralwhite;
+            text-align: center;
+        }
+        header h1{
+            color: blue;
+        }
+        .names{
+            margin-left: 350px;
+            padding: 100px;
+            width: 300px;
+            margin-top: 30px;
+            border: 2px solid grey;
+        }
+        input{
+            padding: 10px;
+            border-radius: 5px;
+            width: 300px;
+            font-size: large;
+            color: darkgray
+        }
+        label{
+            gap: 10px; 
+            font-size: larger;
+        }
+        #btn-2{
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 10px;
+            margin-left: 10px;
+            
+        }
+        .returnpage{
+            padding: 10px;
+        }
+        .returnpage a{
+            text-decoration: none;
+            margin-top: 30px;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+       <header class="head">
+        <h1>facebook</h1>
+       </header>    
+       <div class="names">
+        <form action="get">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Lastname" required>
+        <label for="passd">password</label>
+        <input type="password" name="passd" id="passd"placeholder="Password" required>
+        <label for="repassd">reenter-password</label>
+        <input type="password" name="repassd" id="repassd" placeholder="reenter-password" required>
+        <input type="button" name="btn-2" id="btn-2" value="Create Account">
+    </form>
+    <div class="returnpage">
+        <a href="fblogin.html">Already have account?/Login</a>
+    </div>
+       </div>
+</body>
+</html>
